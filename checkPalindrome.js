@@ -1,8 +1,12 @@
 function palindrom(string) {
-  const reversed = [...string].reverse().join("");
-  if (reversed === string) {
+  if (string === "" || typeof string !== "string" || string.length <= 1) {
+    return "Sorry error in input";
+  }
+  const reveresed = [...string].reverse().join("");
+  if (string === reveresed) {
     return true;
   }
   return false;
 }
-console.log(palindrom("malayalam"));
+
+console.log(palindrom(""));
